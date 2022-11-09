@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace YovanStankovic
 {
+    enum Species {SeaButterfly, Anchovy, SnappingTurtle, Koi, Crawfish, Tadpole, Pike};
     public class Fish : MonoBehaviour
     {
         public string species;
@@ -24,13 +25,13 @@ namespace YovanStankovic
         {
             Stats();
 
-            speciesArray[0] = "Sea Butterfly";
-            speciesArray[1] = "Anchovy";
-            speciesArray[2] = "Snapping Turtle";
-            speciesArray[3] = "Koi";
-            speciesArray[4] = "Crawfish";
-            speciesArray[5] = "Tadpole";
-            speciesArray[6] = "Pike";
+            //speciesArray[0] = "Sea Butterfly";
+            //speciesArray[1] = "Anchovy";
+            //speciesArray[2] = "Snapping Turtle";
+            //speciesArray[3] = "Koi";
+            //speciesArray[4] = "Crawfish";
+            //speciesArray[5] = "Tadpole";
+            //speciesArray[6] = "Pike";
         }
 
         private void Stats()
