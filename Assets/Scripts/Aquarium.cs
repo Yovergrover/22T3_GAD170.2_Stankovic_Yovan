@@ -50,6 +50,11 @@ namespace YovanStankovic
             newFish = newFishStart.GetComponent<Fish>();
         }
 
+        public void MoneyTotals()
+        {
+
+        }
+
         private void RoundCounter()
         {
             if (counter == 10)

@@ -11,6 +11,7 @@ namespace YovanStankovic
         public string species;
         public float length = 0f;
         public int value;
+        public int cashTotal;
 
         [SerializeField] private string[] speciesArray = new string[7]; //{"Sea Butterfly", "Anchovy", "Snapping Turtle", "Koi", "Crawfish", "Tadpole", "Pike" }
 
@@ -46,7 +47,7 @@ namespace YovanStankovic
 
             value += Random.Range(10, 100);
 
-
+            cashTotal = value + value;
         }
     }
 }
