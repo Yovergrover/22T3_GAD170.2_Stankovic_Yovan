@@ -7,14 +7,17 @@ namespace YovanStankovic
 {
     public class Aquarium : MonoBehaviour
     {
-        [SerializeField] List<Fish> fish = new List<Fish>();
-        private Fish smallestLength;
-        private float totalValue;
+        [SerializeField] List<Fish> listOfFish = new List<Fish>();
+        public float totalValue;
 
         [SerializeField] private GameObject fishPrefab;
         private GameObject newFishStart;
+
+        public bool fishRemoved = false;
         public Fish newFish;
 
+        public GameObject activeGameUI;
+        public GameObject gameOverUI;
         public int counter;
 
 
@@ -23,9 +26,22 @@ namespace YovanStankovic
             AddFish();
         }
 
-        public void KeepFishButton()
+        public void KeepFishButton() //Yovan
         {
-            fish.Add(newFish);
+            fishRemoved = false;
+            for (int i = 0; i < listOfFish.Count; i++)
+            {
+                if (newFish.length >= listOfFish[i].length && fishRemoved == false)
+                {
+                    Debug.Log("Fish is Gone Brother");
+                    totalValue -= listOfFish[i].value;
+                    listOfFish.Remove(listOfFish[i]);
+
+                    fishRemoved = true;
+                }
+            }
+
+            listOfFish.Add(newFish);
             totalValue += newFish.value;
 
             AddFish();
@@ -33,9 +49,10 @@ namespace YovanStankovic
             Debug.Log(counter);
 
             RoundCounter();
+
         }
 
-        public void ReleaseButton()
+        public void ReleaseButton() //Luka
         {
             Destroy(newFish.gameObject);
 
@@ -43,23 +60,20 @@ namespace YovanStankovic
             counter++;
 
             RoundCounter();
+
         }
-        public void AddFish()
+        public void AddFish() //Dylan
         {
             newFishStart = Instantiate(fishPrefab, transform);
             newFish = newFishStart.GetComponent<Fish>();
         }
 
-        public void MoneyTotals()
-        {
-
-        }
-
-        private void RoundCounter()
+        private void RoundCounter() //Yovan
         {
             if (counter == 10)
             {
-                SceneManager.LoadScene(2);
+                activeGameUI.SetActive(false);
+                gameOverUI.SetActive(true);
                 Debug.Log("Game Over");
             }
         }

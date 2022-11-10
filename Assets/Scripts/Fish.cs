@@ -5,37 +5,21 @@ using UnityEngine;
 
 namespace YovanStankovic
 {
-    enum Species {SeaButterfly, Anchovy, SnappingTurtle, Koi, Crawfish, Tadpole, Pike};
+    enum Species {SeaButterfly, Anchovy, SnappingTurtle, Koi, Crawfish, Tadpole, Pike}; //Yovan
     public class Fish : MonoBehaviour
     {
         public string species;
         public float length = 0f;
         public int value;
-        public int cashTotal;
 
         [SerializeField] private string[] speciesArray = new string[7]; //{"Sea Butterfly", "Anchovy", "Snapping Turtle", "Koi", "Crawfish", "Tadpole", "Pike" }
-
-        public Fish(string newSpecies, float newLength, int newValue)
-        {
-            species = newSpecies;
-            length = newLength;
-            value = newValue;
-        }
 
         void Start()
         {
             Stats();
-
-            speciesArray[0] = "Sea Butterfly";
-            speciesArray[1] = "Anchovy";
-            speciesArray[2] = "Snapping Turtle";
-            speciesArray[3] = "Koi";
-            speciesArray[4] = "Crawfish";
-            speciesArray[5] = "Tadpole";
-            speciesArray[6] = "Pike";
         }
 
-        private void Stats()
+        private void Stats() //Yovan
         {
             string randomSpecies = speciesArray[Random.Range(0, speciesArray.Length)];
 
@@ -47,7 +31,6 @@ namespace YovanStankovic
 
             value += Random.Range(10, 100);
 
-            cashTotal = value + value;
         }
     }
 }

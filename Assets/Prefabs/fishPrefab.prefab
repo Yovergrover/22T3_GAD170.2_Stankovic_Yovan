@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642012619026205598}
   - component: {fileID: 1642012619026205593}
+  - component: {fileID: 5824666454718889534}
   m_Layer: 0
   m_Name: fishPrefab
   m_TagString: Untagged
@@ -55,3 +56,20 @@ MonoBehaviour:
   - Crawfish
   - Tadpole
   - Pike
+--- !u!114 &5824666454718889534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642012619026205592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2fae8dbebb41f47b0849243f2ed6db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish: []
+  cashTotals: 0
+  fishPrefab: {fileID: 0}
+  newFish: {fileID: 0}
+  counter: 0
