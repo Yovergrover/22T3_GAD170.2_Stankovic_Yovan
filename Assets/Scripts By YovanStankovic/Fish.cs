@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace YovanStankovic
 {
-    enum Species {SeaButterfly, Anchovy, SnappingTurtle, Koi, Crawfish, Tadpole, Pike}; //Yovan
+    enum Species {SeaButterfly, Anchovy, SnappingTurtle, Koi, Crawfish, Tadpole, Pike}; //I used an enum for the species as its simple and gets all the species names in one line of code
     public class Fish : MonoBehaviour
     {
         public string species;
@@ -19,7 +19,7 @@ namespace YovanStankovic
             Stats();
         }
 
-        private void Stats() //Yovan
+        private void Stats() //this basically invovled giving our variables a purporse and what they would display in the code
         {
             string randomSpecies = speciesArray[Random.Range(0, speciesArray.Length)];
 

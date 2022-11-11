@@ -26,7 +26,7 @@ namespace YovanStankovic
             AddFish();
         }
 
-        public void KeepFishButton() //Yovan
+        public void KeepFishButton() //I made a boolean so that we could recognise when we actually caught the fish
         {
             fishRemoved = false;
             for (int i = 0; i < listOfFish.Count; i++)
@@ -52,7 +52,7 @@ namespace YovanStankovic
 
         }
 
-        public void ReleaseButton() //Luka
+        public void ReleaseButton() //Luka made the release fish buttons method using a destroy gameobject and adding that action to the round counter
         {
             Destroy(newFish.gameObject);
 
@@ -62,13 +62,13 @@ namespace YovanStankovic
             RoundCounter();
 
         }
-        public void AddFish() //Dylan
+        public void AddFish() //Dylan had looked into Instantiates which helped us actually add our fish to the aquarium
         {
             newFishStart = Instantiate(fishPrefab, transform);
             newFish = newFishStart.GetComponent<Fish>();
         }
 
-        private void RoundCounter() //Yovan
+        private void RoundCounter() //I used a roundcounter to put a limit on how many times you can get/throw away a fish before the game ends
         {
             if (counter == 10)
             {

@@ -15,7 +15,7 @@ namespace YovanStankovic
         public Aquarium AQ;
         public Fish FSH;
 
-        void Update() // Luka
+        void Update() // Luka mainly worked on the textmesh side of the code and found a really usefully and simple method to display our scores with visuals
         {
             textDisplaySpecies.GetComponent<TextMeshProUGUI>().text = "SPECIES: " + AQ.newFish.species;
             textDisplayLength.GetComponent<TextMeshProUGUI>().text = "LENGTH OF FISH: " + AQ.newFish.length + " cm";
